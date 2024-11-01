@@ -17,9 +17,13 @@ namespace PracticaProgramada2_Grupo8.Data
         // Parte de Usuarios
         public DbSet<UsuarioModel> G8_USUARIOS { get; set; }
 
+        // Parte de Canciones
+        public DbSet<CancionModel> G8_CANCIONES { get; set; }
+
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.Entity<UsuarioModel>().ToTable("G8_USUARIOS");
+            modelBuilder.Entity<CancionModel>().ToTable("G8_CANCIONES");
         }
     }
 }
